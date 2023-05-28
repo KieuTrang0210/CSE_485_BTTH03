@@ -8,6 +8,7 @@ class Article {
     private $category_id;
     private $member_id;
     private $image_id;
+    private $published;
     
     // hàm tạo
     public function __construct(){
@@ -47,7 +48,15 @@ class Article {
         return $this->image_id;
     }
 
+    public function getPublished(){
+        return $this->published;
+    }
+
     //setter
+    public function setID($id){
+        $this->id = $id;
+    }
+
     public function setTitle($title){
         $this->title = $title;
     }
@@ -74,5 +83,9 @@ class Article {
 
     public function setImage_id($image_id){
         $this->image_id = $image_id;
+    }
+
+    public function setPublished($published){
+        $this->published = $published;
     }
 }
